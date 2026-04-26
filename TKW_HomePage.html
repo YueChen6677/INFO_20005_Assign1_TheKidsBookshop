@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kids' Workshop</title>
+     <link rel="stylesheet" href="TKW.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="TKW_HomePage.html" class="header-logo">
+      <img src="images/logo.png" alt="The Kids' Workshop Logo" />
+      <div class="header-logo-text">THE KIDS'<br>WORKSHOP</div>
+    </a>
+
+    <nav class="header-nav">
+      <a href="TKW_Library.html">Library</a>
+      <a href="TKW_Workshops.html">Workshops</a>
+      <a href="TKW_About.html">About Us</a>
+    </nav>
+
+    <div class="header-right">
+      <form class="header-search search-form" id="headerSearchForm">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input id="headerSearchInput" type="text" placeholder="Search books, authors..." />
+      </form> //need to be hidden on mobile, and moved into mobile menu//
+
+      <div class="header-icons">
+        <span class="lang-badge">English · AUD$</span>
+        <a href="TKW_ShoppingCart.html">
+          <img src="icon-cart.png" alt="Cart" width="22" height="22" />
+          <span class="cart-count">0</span>
+        </a>
+        <a href="TKW_Profile.html">
+          <img src="icon-profile.png" alt="Profile" width="22" height="22" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="TKW_Library.html">Library</a>
+    <a href="TKW_Workshops.html">Workshops</a>
+    <a href="TKW_About.html">About Us</a>
+    <form class="search-form" style="display:flex;gap:8px;margin-top:4px;">
+      <input type="text" placeholder="Search books, authors..." style="flex:1;padding:8px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.15);color:#fff;font-family:inherit;outline:none;" />
+      <button type="submit" class="btn-primary" style="padding:8px 16px;">Go</button> //prepare //
+    </form>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">THE KIDS'<br>WORKSHOP</h1>
+      <p class="hero-subtitle">A cosy little space where every child finds their favourite book and a love for reading.</p>
+      <div class="hero-buttons">
+        <a href="TKW_Library.html" class="btn-primary">Explore Books</a>
+        <a href="TKW_Workshops.html" class="btn-outline">Our Workshops</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="TKW Image Sources/original_tkbartboard_10.png" alt="Child with books" />
+    </div>
+  </section>
+
+  <!-- Wave divider/externalReference -->
+  <div class="wave-top">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F5EFE0"/>
+    </svg>
+  </div>
+
+  <!-- STORE PHOTO SECTION -->
+  <section class="store-section">
+    <div class="store-image-wrap">
+      <img src="TKW Image Sources/store.png" alt="Inside the Kids' Workshop store" />
+    </div>
+  </section>
+
+  <!-- OUR WORKSHOP INFO -->
+  <section class="about-section">
+    <h2 class="section-title">Our Workshop</h2>
+    <p class="about-desc">
+      The Kids' Workshop is a warm and welcoming children's bookstore designed for little readers.<br />
+      Our physical store is filled with carefully chosen picture books, storybooks, and fun reading activities.<br />
+      We create a bright and cozy space where kids can explore stories, let their imaginations grow, and fall in love with reading.
+    </p>
+
+    <div class="hours-block">
+      <div class="hours-row">
+        <strong>OPEN</strong>
+        <span>Tuesday – Friday &nbsp; 9:30am – 4:00pm</span>
+      </div>
+      <div class="hours-row">
+        <strong>WEEKENDS</strong>
+        <span>9:00am – 3:00pm</span>
+      </div>
+    </div>
+
+    <a href="TKW_About.html" class="btn-primary">Visit Us</a>
+  </section>
+
+  <!-- Wave up into dark section/externalReference -->
+  <div class="wave-top" style="transform:rotate(180deg); margin-bottom:-2px;">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#8B1A2B"/>
+    </svg>
+  </div>
+
+  <!-- ONLINE STORE SECTION -->
+  <section class="online-store-section">
+    <h2 class="section-title" style="color:#fff;">Online Store</h2>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">Chosen with love by our resident workshop artisans.</p>
+
+    <div class="age-categories">
+      <a href="TKW_Library.html?age=0-6" class="age-card">
+        <div class="age-card-img"><img src="TKW Image Sources/3.png" alt="Books for 1-6 years" /></div>
+        <h3>1–6 Years</h3>
+        <p>Eu turpis egestas pretium aenean pharetra magna ac.</p>
+        <span class="btn-primary" style="margin-top:auto;">Read More</span>
+      </a>
+      <a href="TKW_Library.html?age=7-9" class="age-card">
+        <div class="age-card-img"><img src="TKW Image Sources/7.png" alt="Books for 7-9 years" /></div>
+        <h3>7–9 Years</h3>
+        <p>Eu turpis egestas pretium aenean pharetra magna ac.</p>
+        <span class="btn-primary" style="margin-top:auto;">Read More</span>
+      </a>
+      <a href="TKW_Library.html?age=10plus" class="age-card">
+        <div class="age-card-img"><img src="TKW Image Sources/10.png" alt="Books for 10+ years" /></div>
+        <h3>10 Years+</h3>
+        <p>Eu turpis egestas pretium aenean pharetra magna ac.</p>
+        <span class="btn-primary" style="margin-top:auto;">Read More</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-goose">
+      <img src="TKW Image Sources/goose.png" alt="Goose mascot" />
+    </div>
+    <div class="footer-main">
+      <div class="footer-logo-text">The Kids' Workshop</div>
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="shipping.html">Shipping Delivery</a>
+        <a href="faq.html">F&Q</a>
+      </div>
+      <div class="footer-social"> //externalReference
+        <a href="#" aria-label="YouTube">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.6 22.2 12 22.2 12 22.2s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.4v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8 3.6-8 3.5z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <div class="footer-contact">
+        Tel: 03 8578 5122<br />
+        Email: <a href="mailto:hello@thekidsbookshop.com.au" style="color:#aaa;">hello@thekidsbookshop.com.au</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="TKW.JS"></script>
+</body>
+</html>
+
+</body>
+</html>
