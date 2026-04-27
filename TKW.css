@@ -1,3 +1,20 @@
+/* ===== VARIABLES/refered ===== */
+:root {
+  --crimson: #8B1A2B;
+  --dark-crimson: #6B1422;
+  --cream: #F5EFE0;
+  --warm-white: #FAF7F2;
+  --dark: #2C2C2C;
+  --gray: #666;
+  --light-gray: #E8E2D9;
+  --font-title: 'Road Rage', cursive;
+  --font-body: 'Poppins', sans-serif;
+  --font-serif: 'Lora', serif;
+}
+/* ===== FONTS/refered ===== */
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Poppins:wght@400;500;600&family=Lora:wght@400;500&display=swap');
+
+
 /* ===== STICKY HEADER ===== */
 .site-header {
   position: sticky;
