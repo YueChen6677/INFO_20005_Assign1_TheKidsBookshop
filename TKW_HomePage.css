@@ -191,6 +191,30 @@
   flex: 1;
 }
 
+.mascot-section {
+    position: relative;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.mascot-goose {
+  background: var(--crimson);
+  text-align: center;
+  position: relative;;
+  height: fit-content;
+  bottom: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mascot-goose img {
+  height: 20rem;
+  margin: 0 auto;
+  display: block;
+}
+
+
 /* ===== RESPONSIVE//refChecked ===== */
 @media (max-width: 900px) {
   .hero { padding: 2rem 2rem 0; }

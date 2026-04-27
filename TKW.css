@@ -208,18 +208,7 @@ img { max-width: 100%; display: block; }
 /* ===== FOOTER ===== */
 .site-footer {
   background: #1e1e1e;
-  color: #ccc;
-}
-
-.footer-goose {
-  background: var(--cream);
-  text-align: center;
-  padding: 2rem 0 0;
-}
-
-.footer-goose img {
-  height: 80px;
-  margin: 0 auto;
+  color: #1e1e1e;
 }
 
 .footer-main {
@@ -232,7 +221,7 @@ img { max-width: 100%; display: block; }
 
 .footer-logo-text {
   font-family: var(--font-title);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #fff;
   letter-spacing: 1px;
 }
