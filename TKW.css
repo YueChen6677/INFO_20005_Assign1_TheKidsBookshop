@@ -292,8 +292,8 @@ img { max-width: 100%; display: block; }
   transition: background 0.2s;
   display: inline-block;
 }
+.btn-outline:hover { background: var(--dark-crimson); transform: translateY(-1px); }
 
-.btn-outline:hover { background: rgba(255,255,255,0.15); }
 
 .btn-dark {
   background: #333;

@@ -1,11 +1,14 @@
 /* ===== HERO ===== */
+.hero-content {
+  margin-right: 15rem;
+}
 .hero {
   background: var(--crimson);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 4rem 0;
-  min-height: 420px;
+  padding: 0rem 8rem 0rem;
+  min-height: 48rem;
   position: relative;
   overflow: hidden;
 }
@@ -18,17 +21,17 @@
 
 .hero-title {
   font-family: var(--font-title);
-  font-size: 5rem;
+  font-size: 10rem;
   color: #fff;
   line-height: 0.95;
-  letter-spacing: 2px;
+  letter-spacing: 5%;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
 }
 
 .hero-subtitle {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: rgba(255,255,255,0.9);
   margin-bottom: 2rem;
   line-height: 1.5;
@@ -41,14 +44,33 @@
 }
 
 .hero-image {
-  flex: 0 0 auto;
-  align-self: flex-end;
-  max-width: 340px;
+  flex: 0.8;
+  min-width: 80%;
+  align-self: stretch;
+  display: flex;
+  position: left: 0; 
+  margin-left: auto; 
 }
 
 .hero-image img {
-  max-height: 380px;
-  object-fit: contain;
+    width: 90%;
+    height: 90%;
+  max-height: none;
+  object-fit: cover;
+  margin-left: 0%;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(107, 5, 34, 02) 0%,
+    transparent 100%);
+  pointer-events: none; 
 }
 
 /* ===== STORE SECTION ===== */
