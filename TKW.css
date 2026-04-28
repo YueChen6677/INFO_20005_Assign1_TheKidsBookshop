@@ -20,6 +20,7 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); color: var(--dark); background: var(--warm-white); }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
+
 .h2{
   font-family: var(--font-title);
   font-size: 3.0rem;
@@ -74,8 +75,7 @@ img { max-width: 100%; display: block; }
 }
  
 .header-nav a:hover { opacity: 0.8; }
-.header-nav a.active { border-bottom: 2px solid #fff; padding-bottom: 2px; }
- 
+
 .header-right {
   display: flex;
   align-items: center;
@@ -190,21 +190,6 @@ img { max-width: 100%; display: block; }
 }
  
 
-.breadcrumb {
-  font-size: 0.8rem;
-  color: var(--gray);
-  padding: 0.6rem 2rem;
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
- 
-.breadcrumb a { color: var(--gray); }
-.breadcrumb a:hover { color: var(--crimson); }
-.breadcrumb span { color: var(--dark); }
-
-
 /* ===== FOOTER ===== */
 .site-footer {
   background: #1e1e1e;
@@ -273,7 +258,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s;
   display: inline-block;
 }
 
