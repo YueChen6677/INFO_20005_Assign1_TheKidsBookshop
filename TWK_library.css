@@ -40,6 +40,12 @@
   right: 0; }
 
 /* ===== !!layoutSum ===== */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
 .library-layout {
   display: flex;
   gap: 2rem;
