@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library – The Kids' Workshop</title>
+  <link rel="stylesheet" href="TKW.css" />
+  <link rel="stylesheet" href="TKW_product.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="TKW_HomePage.html" class="header-logo">
+      <img src="TKW Image Sources/original_tkbartboard_10.png" alt="The Kids' Workshop Logo" />
+      <div class="header-logo-text">THE KIDS'<br>WORKSHOP</div>
+    </a>
+    <nav class="header-nav">
+      <a href="TKW_library.html" >Library</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <div class="header-right">
+      <form class="header-search search-form">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input id="headerSearchInput" type="text" placeholder="Search books, authors..." />
+      </form>
+      <div class="header-icons">
+        <span class="lang-badge">English · AUD$</span>
+        <a href="TKW_ShoppingCart.html">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="account.html">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="library.html">Library</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="about.html">About Us</a>
+  </nav>
+
+ <!-- banner -->
+  <div class="library-banner">
+    <div class="banner-char banner-char-left">
+      <img src="TKW Image Sources/original_banner-patternartboard_6-100.jpg" alt="" aria-hidden="true" />
+    </div>
+    <h1 class="library-banner-title">Discover Your Next<br>Favourite Story</h1>
+  </div>
+
+    <section class="product-section">
+    <div class="product-images">
+      <div class="product-main-img">
+        <img src="TKW Image Sources/b3.5.png" alt="His Peppa Pigs" />
+        <div class="recommend-badge">✦ Recommend</div>
+      </div>
+      <div class="product-thumbs">
+        <div class="thumb active"><img src="TKW Image Sources/b3.5.png" alt="CoverPage" /></div>
+        <div class="thumb"><img src="TKW Image Sources/b3.png" alt="Thumbnail 1" /></div>
+        <div class="thumb"><img src="TKW Image Sources/b3.png" alt="Thumbnail 2" /></div>
+        <div class="thumb"><img src="TKW Image Sources/b3.png" alt="Thumbnail 3" /></div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="product-info">
+      <span class="product-age-tag">Ages 1–6</span>
+      <h1 class="product-title">His Peppa Pigs</h1>
+      <p class="product-author">by Carol Caroline</p>
+
+      <div class="stars">
+        <span class="star-icons">★★★★☆</span>
+        <span>(128 Reviews)</span>
+      </div>
+
+      <div class="product-overview">
+        <h3>Overview</h3>
+        <p>Eu turpis egestas pretium aenean pharetra magna ac. Eu turpis egestas pretium aenean pharetra magna ac. Eu turpis egestas pretium aenean pharetra magna ac.</p>
+        <button class="read-more-btn">Read More ↓</button>
+      </div>
+
+      <div class="product-price-row">
+        <span class="product-price">$18.99</span>
+        <span class="product-price-original"></span>
+      </div>
+
+      <div class="product-actions">
+        <div class="qty-control">
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <span class="qty-num" id="qtyDisplay">0</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+        <button class="btn-add-cart" id="addToCartBtn">Add to Cart</button>
+      </div>
+
+      <div class="edition-row">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        Hardcover Edition
+      </div>
+
+      <div class="btn-row-2">
+        <button class="btn-reserve">Click &amp; Reserve</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOK DETAILS + REVIEW ===== -->
+  <div class="product-details-section">
+    <div class="details-card">
+      <h3>Book Details</h3>
+      <div class="details-grid">
+        <div class="detail-item">
+          <label>Publisher</label>
+          <span>Storybook Atelier</span>
+        </div>
+        <div class="detail-item">
+          <label>Publication Date</label>
+          <span>November 12, 2023</span>
+        </div>
+        <div class="detail-item">
+          <label>Pages</label>
+          <span>48 Full Colour Pages</span>
+        </div>
+        <div class="detail-item">
+          <label>ISBN</label>
+          <span>978-3-16-148410-0</span>
+        </div>
+        <div class="detail-item">
+          <label>Language</label>
+          <span>English</span>
+        </div>
+        <div class="detail-item">
+          <label>Format</label>
+          <span>Hardcover</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <h3>Book Review</h3>
+      <p class="review-quote">"Interesting, Very good. My kids liked it. Interesting, Very good. My kids liked it. Interesting, Very good. My kids liked it."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">
+          <img src="TKW Image Sources/goose.png" alt="C_C" />
+        </div>
+        <div>
+          <div class="reviewer-name">C_C</div>
+          <div class="reviewer-role">Pro Curator</div>
+        </div>
+      </div>
+    </div>
+  </div>
