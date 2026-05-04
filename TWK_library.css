@@ -99,3 +99,73 @@
   flex-wrap: wrap;
 }
 
+
+
+/* ===== AlsoLike ===== */
+.also-like-section {
+  background: var(--cream);
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.also-like-inner { flex: 1; max-width: 760px; }
+
+.also-like-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.see-all-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--crimson);
+  white-space: nowrap;
+}
+
+.also-like-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.also-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: var(--dark);
+}
+
+.also-card:hover { transform: translateY(-3px); }
+
+.also-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--light-gray);
+  margin-bottom: 4px;
+}
+
+.also-card-label { font-size: 0.82rem; font-weight: 600; }
+.also-card-cat { font-size: 0.75rem; color: var(--gray); }
+.also-card-price { font-size: 0.85rem; font-weight: 700; color: var(--crimson); margin-top: 4px; }
+
+.also-like-char {
+  flex: 0 0 180px;
+  align-self: flex-end;
+}
+
+.also-like-char img { max-height: 220px; object-fit: contain; }
