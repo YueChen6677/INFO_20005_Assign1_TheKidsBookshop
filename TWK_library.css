@@ -84,3 +84,18 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+/* ===== MainSection ===== */
+.library-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-sort-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
