@@ -259,3 +259,89 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+
+/* BookDetail */
+.product-details-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.details-card, .review-card {
+  background: var(--cream);
+  border-radius: 18px;
+  padding: 1.8rem;
+}
+
+.details-card h3, .review-card h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: var(--dark);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-item label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gray);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.detail-item span {
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+/* Review */
+.review-quote {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--dark);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviewer-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.reviewer-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.reviewer-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.reviewer-role {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
