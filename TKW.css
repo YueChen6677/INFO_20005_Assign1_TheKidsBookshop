@@ -400,6 +400,20 @@ img { max-width: 100%; display: block; }
 
 .add-btn:hover { background: var(--dark-crimson); }
 
+.age-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--crimson);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* Gallery */
 .books-grid {
   display: grid;
