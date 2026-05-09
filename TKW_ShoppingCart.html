@@ -70,6 +70,55 @@
   </div>
 
  <!-- ===== MainContent ===== -->
+<div class="cart-layout">
+    <!-- CartItems -->
+    <div class="cart-left">
+      <!-- EmptyState -->
+      <div id="cartEmpty" style="display:none; text-align:center; padding:3rem 0; color:var(--gray);">
+        <p style="font-size:1rem; margin-bottom:1rem;">Your cart is empty.</p>
+        <a href="library.html" class="btn-primary">Browse Books</a>
+      </div>
+
+      <!-- Items rendered by JS -->
+      <div id="cartItemsList"></div>
+      <!-- Keep browsing -->
+      <div class="keep-browsing">
+        Found something else? The workshop is full of more treasures.
+        <a href="library.html">Keep Browsing →</a>
+      </div>
+    </div>
+
+    <!-- OrderSummary -->
+    <div class="cart-right">
+      <div class="order-summary">
+        <div class="order-summary-title">ORDER SUMMARY</div>
+        <div class="summary-row">
+          <span class="label">Subtotal</span>
+          <span class="js-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Shipping Estimate</span>
+          <span class="summary-free">FREE</span>
+        </div>
+        <hr class="summary-divider" />
+
+        <div class="summary-total-row">
+          <span class="summary-total-label">Total</span>
+          <span class="summary-total-price">
+            <span class="dollar">$</span>
+            <span class="js-total-large">0</span>
+          </span>
+        </div>
+
+        <button class="btn-checkout" onclick="window.location.href='purchase-shipping.html'">
+          Proceed to Checkout
+        </button>
+        <p class="summary-note">
+          Free shipping on orders over $15. No hassle returns for 30 days.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <!-- Recommend section -->
   <section class="also-like-section">
