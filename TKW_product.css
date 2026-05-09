@@ -350,7 +350,7 @@
 /* ===== AlsoLike ===== */
 .also-like-section {
   background: var(--cream);
-  padding: 3rem 12rem;
+  padding: 3rem 15rem;
   display: flex;
   align-items: flex-end;
   gap: 2rem;
