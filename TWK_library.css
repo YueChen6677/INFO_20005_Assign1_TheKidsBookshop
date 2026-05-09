@@ -110,7 +110,7 @@
 /* ===== AlsoLike ===== */
 .also-like-section {
   background: var(--cream);
-  padding: 3rem 2rem;
+  padding: 3rem 12rem;
   display: flex;
   align-items: flex-end;
   gap: 2rem;
