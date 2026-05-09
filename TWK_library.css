@@ -40,12 +40,6 @@
   right: 0; }
 
 /* ===== !!layoutSum ===== */
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
 .library-layout {
   display: flex;
   gap: 2rem;
@@ -164,7 +158,22 @@
 
 .btn-outline-dark:hover { border-color: var(--crimson); color: var(--crimson); }
 
-/* ===== SearchForm ===== */
+
+/* ===== MainSection ===== */
+.library-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-sort-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/*SearchForm */
 .lib-search-form {
   flex: 1;
   display: flex;
@@ -210,20 +219,36 @@
   background: #fff;
 }
 
-/* ===== MainSection ===== */
-.library-main {
-  flex: 1;
-  min-width: 0;
-}
-
-.search-sort-bar {
-  display: flex;
-  gap: 1rem;
+/* ===== PAGINATION ===== */
+.pagination {
+  display:flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
 }
 
+.page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--light-gray);
+  background: #fff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn:hover:not(:disabled) { background: var(--crimson); color: #fff; border-color: var(--crimson); }
+.page-btn.active { background: var(--crimson); color: #fff; border-color: var(--crimson); }
+.page-btn:disabled { opacity: 0.4; cursor: default; }
+.page-ellipsis { color: var(--gray); padding: 0 4px; }
 
 
 /* ===== AlsoLike ===== */
