@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping Cart – The Kids' Workshop</title>
+  <title>Purchase – Payment – The Kids' Workshop</title>
   <link rel="stylesheet" href="TKW.css" />
   <link rel="stylesheet" href="TKW_CartPurchase.css" />
 </head>
-<body>
 <body>
   <header class="site-header">
     <a href="TKW_HomePage.html" class="header-logo">
@@ -60,50 +59,106 @@
     <span>Library</span>
   </div>
 
- <!-- banner -->
-
-  <div class="cart-banner">
+<!--Banner -->
+  <div class="purchase-banner">
+    <h1 class="purchase-banner-title">PURCHASE</h1>
     <div class="banner-char banner-char-left">
-      <img src="TKW Image Sources/original_banner-patternartboard_6-100.jpg" alt="" aria-hidden="true" />
+      <img src="images/purchase-char-1.png" alt="" aria-hidden="true" />
     </div>
-    <h1 class="cart-banner-title">SHOPPING CART</h1>
-    <div class="cart-banner-count" id="bannerItemCount">0 Items in bag</div>
     <div class="banner-char banner-char-right">
-      <img src="TKW Image Sources/original_banner-patternartboard_6-100.jpg" alt="" aria-hidden="true" />
+      <img src="images/purchase-char-right.png" alt="" aria-hidden="true" />
     </div>
   </div>
 
- <!-- ===== MainContent ===== -->
-<div class="cart-layout">
-    <!-- CartItems -->
+<!-- StepBar-->
+  <div class="step-bar">
+    <div class="step-track">
+      <div class="step-item">
+        <div class="step-circle">
+        <a href="TKW_Purchase_Payment.html">
+          <img src="xxxx" alt="Shipping" />
+        </a>
+        </div>
+
+        <div class="step-label">Shipping</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item active">
+        <div class="step-circle">
+            <a href="TKW_Purchase_Shipping.html">
+          <img src="xxx" alt="Payment" />
+        </a>
+        </div>
+
+        <div class="step-label">Payment</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item">
+        <div class="step-circle">
+            <a href="TKW_Purchase_Review.html">
+          <img src="sdf" alt="Review" />
+        </a>
+        </div>
+        <div class="step-label">Review</div>
+      </div>
+    </div>
+  </div>
+
+<!--Content-->
+  <div class="cart-layout">
+    <!-- LEFT-->
     <div class="cart-left">
-      <!-- EmptyState -->
-      <div id="cartEmpty" style="display:none; text-align:center; padding:3rem 0; color:var(--gray);">
-        <p style="font-size:1rem; margin-bottom:1rem;">Your cart is empty.</p>
-        <a href="library.html" class="btn-primary">Browse Books</a>
+      <h2 class="purchase-heading">Secure Payment</h2>
+      <p class="purchase-subtext">Almost there! Your stories are waiting to be sent to their new home.</p>
+
+      <!-- PaymentMethods -->
+      <div class="payment-tabs">
+        <button class="pay-tab active">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Credit Card
+        </button>
+        <button class="pay-tab">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          PayPal
+        </button>
       </div>
 
-      <!-- Items rendered by JS -->
-      <div id="cartItemsList"></div>
-      <!-- Keep browsing -->
-      <div class="keep-browsing">
-        Found something else? The workshop is full of more treasures.
-        <a href="library.html">Keep Browsing →</a>
+      <div class="form-group">
+        <label for="cardName">Cardholder Name</label>
+        <input class="form-input" id="cardName" type="text" placeholder="Full name as on card" />
+      </div>
+
+      <div class="form-group" style="position:relative;">
+        <label for="cardNumber">Card Number</label>
+        <input class="form-input" id="cardNumber" type="text" placeholder="0000 0000 0000 0000" maxlength="19" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiry">Expiry Date</label>
+          <input class="form-input" id="expiry" type="text" placeholder="MM/YY" maxlength="5" />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input class="form-input" id="cvv" type="text" placeholder="***" maxlength="4" />
+        </div>
       </div>
     </div>
 
-    <!-- OrderSummary -->
+    <!-- RIGHT-->
     <div class="cart-right">
       <div class="order-summary">
         <div class="order-summary-title">ORDER SUMMARY</div>
+
         <div class="summary-row">
           <span class="label">Subtotal</span>
           <span class="js-subtotal">$0.00</span>
         </div>
         <div class="summary-row">
-          <span class="label">Shipping Estimate</span>
+          <span class="label">Shipping</span>
           <span class="summary-free">FREE</span>
         </div>
+
         <hr class="summary-divider" />
 
         <div class="summary-total-row">
@@ -114,49 +169,36 @@
           </span>
         </div>
 
-        <button class="btn-checkout" onclick="window.location.href='purchase-shipping.html'">
-          Proceed to Checkout
+        <button class="btn-checkout" onclick="window.location.href='purchase-review.html'">
+          Confirm &amp; Pay
         </button>
-        <p class="summary-note">
-          Free shipping on orders over $15. No hassle returns for 30 days.
+
+        <p class="summary-terms">
+          By clicking Place Order, you agree to the
+          <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.
         </p>
+
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Secure SSL
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Eco-Packed
+          </div>
+          <div class="trust-badge">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            100% Joy
+          </div>
+        </div>
+        <p class="trust-note">Eu turpis egestas pretium aenean pharetra magna ac. Eu turpis egestas pretium aenean.</p>
       </div>
     </div>
+
   </div>
 
-  <!-- Recommend section -->
-  <section class="also-like-section">
-    <div class="also-like-inner">
-      <div class="also-like-header">
-        <div>
-          <h2 class="section-title" style="text-align:left;font-size:1.8rem;">You might also like...</h2>
-          <p style="font-size:0.85rem;color:var(--gray);">Curated stories for curious young minds</p>
-        </div>
-        <a href="TKW_library.html" class="see-all-link">See All Books →</a>
-      </div>
-      <div class="also-like-grid">
-        <a href="TKW_product-hispeppa.html" class="also-card">
-          <img src="TKW Image Sources/b3.png" alt="His Peppa Pigs" />
-          <div class="also-card-label">His Peppa Pigs</div>
-          <div class="also-card-cat">Picture Books</div>
-          <div class="also-card-price">$18.99</div>
-        </a>
-        <a href="product-mypeppa.html" class="also-card">
-          <img src="TKW Image Sources/b2.png" alt="My Peppa Pigs" />
-          <div class="also-card-label">My Peppa Pigs</div>
-          <div class="also-card-cat">Picture Books</div>
-          <div class="also-card-price">$18.99</div>
-        </a>
-        <a href="#" class="also-card">
-          <img src="TKW Image Sources/b1.png" alt="Peppa's Big Adventure" />
-          <div class="also-card-label">Peppa's Big Adventure</div>
-          <div class="also-card-cat">Books</div>
-          <div class="also-card-price">$22.50</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-main">
