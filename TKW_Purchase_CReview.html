@@ -117,6 +117,73 @@
     </div>
   </div>
 
+<!--MainContent-->
+  <div class="cart-layout">
+
+    <!-- ReviewSum -->
+    <div class="cart-left">
+
+      <!-- Shipping-->
+      <div class="review-box">
+        <div class="review-box-header">
+          <div class="review-box-title">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Shipping To
+          </div>
+          <button class="review-change" onclick="window.location.href='purchase-shipping.html'">Change</button>
+        </div>
+        <div class="review-box-content">
+          The University of Melbourne<br />
+          Parkville VIC 3010
+        </div>
+      </div>
+
+      <!-- Payment -->
+      <div class="review-box">
+        <div class="review-box-header">
+          <div class="review-box-title">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Payment
+          </div>
+          <button class="review-change" onclick="window.location.href='purchase-payment.html'">Change</button>
+        </div>
+        <div class="review-box-content">Visa</div>
+      </div>
+
+      <!-- OrderSum -->
+      <div class="review-box">
+        <div class="review-box-header">
+          <div class="review-box-title">Order Summary</div>
+        </div>
+        <div class="review-box-content">
+          <div class="summary-row" style="margin-bottom:0.5rem;">
+            <span>Subtotal</span>
+            <span class="js-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row" style="margin-bottom:0.5rem;">
+            <span>Shipping</span>
+            <span class="summary-free">FREE</span>
+          </div>
+          <hr class="summary-divider" />
+          <div class="summary-row" style="font-weight:700; color:var(--dark);">
+            <span>Total</span>
+            <span style="color:var(--crimson); font-size:1.1rem;">$<span class="js-total-large">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-place-order" onclick="window.location.href='library.html'">
+        Back to Library
+      </button>
+
+      <p class="place-order-terms">
+        By placing your order, you agree to The
+        <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.
+      </p>
+
+    </div>
+  </div>
+
 <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-main">
