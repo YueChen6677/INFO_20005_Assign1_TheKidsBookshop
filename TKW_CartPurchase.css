@@ -264,3 +264,87 @@
 }
 
 .summary-terms a { color: var(--crimson); }
+
+
+/* PurchaseForm */
+.purchase-heading {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--crimson);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.purchase-subtext {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  background: var(--cream);
+  border: none;
+  border-radius: 24px;
+  padding: 12px 18px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--dark);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.form-input::placeholder { color: #bbb; }
+.form-input:focus { box-shadow: 0 0 0 2px var(--crimson); }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ===== PAYMENT TABS ===== */
+.payment-tabs {
+  display: flex;
+  border: 1.5px solid var(--light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.pay-tab {
+  flex: 1;
+  padding: 10px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pay-tab.active {
+  background: var(--crimson);
+  color: #fff;
+}
