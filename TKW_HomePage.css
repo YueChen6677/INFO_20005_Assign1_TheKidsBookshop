@@ -232,7 +232,7 @@
 }
 
 
-/* ===== RESPONSIVE//refChecked ===== */
+/* RESPONSIVE//refChecked*/
 @media (max-width: 900px) {
   .hero { padding: 2rem 2rem 0; }
   .hero-title { font-size: 3.5rem; }

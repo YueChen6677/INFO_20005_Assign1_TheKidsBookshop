@@ -278,3 +278,19 @@
 }
 
 .also-like-char img { max-height: 220px; object-fit: contain; }
+
+@media (max-width: 900px) {
+  .library-layout { flex-direction: column; padding: 1.5rem 1rem; }
+  .sidebar { position: static; flex: none; width: 100%; flex-direction: row; flex-wrap: wrap; gap: 0.8rem; }
+  .sidebar-section { flex: 1 1 160px; border-bottom: none; border-right: 1px solid var(--light-gray); padding-right: 1rem; }
+  .sidebar-section:last-of-type { border-right: none; }
+  .also-like-char { display: none; }
+  .also-like-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .library-banner-title { font-size: 1.8rem; }
+  .banner-char { height: 70px; }
+  .search-sort-bar { flex-direction: column; align-items: stretch; }
+  .also-like-grid { grid-template-columns: repeat(2, 1fr); }
+}
