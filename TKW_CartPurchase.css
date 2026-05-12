@@ -349,3 +349,24 @@
 
 .place-order-terms a { color: var(--crimson); }
 
+@media (max-width: 768px) {
+  .cart-layout { flex-direction: column; padding: 1.5rem 1rem; }
+  .cart-right { flex: none; width: 100%; position: static; }
+  .order-summary { position: static; }
+  .cart-banner-title { font-size: 2rem; }
+  .purchase-banner-title { font-size: 2rem; }
+  .step-line { width: 40px; }
+  .cart-banner { padding: 1.2rem 1.5rem; }
+  .purchase-banner { padding: 1.2rem 1.5rem; }
+  .purchase-banner .banner-char-left { left: 180px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .cart-item-img { flex: 0 0 80px; height: 105px; }
+  .cart-banner-title { font-size: 1.6rem; }
+  .cart-banner .banner-char { height: 70px; }
+  .purchase-banner .banner-char { height: 70px; }
+  .trust-badges { gap: 1rem; }
+  .step-line { width: 24px; }
+}
