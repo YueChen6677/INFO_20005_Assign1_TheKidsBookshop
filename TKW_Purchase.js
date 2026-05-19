@@ -35,7 +35,7 @@ function initShippingForm() {
         city      : city.value.trim(),
         zip       : zip.value.trim()
       };
-      localStorage.setItem('tkwShipping', JSON.stringify(addr));
+      sessionStorage.setItem('tkwShipping', JSON.stringify(addr));
     });
   }
 }
@@ -91,7 +91,7 @@ function initReviewPage() {
   if (!addressEl) return;   // not on review page
 
   try {
-    var addr = JSON.parse(localStorage.getItem('tkwShipping')) || {};
+    var addr = JSON.parse(sessionStorage.getItem('tkwShipping')) || {};
     var line1 = (addr.firstName + ' ' + addr.lastName).trim();
     var line2 = addr.street  || '';
     var line3 = (addr.city + ' ' + addr.zip).trim();
