@@ -1,11 +1,11 @@
 
 function getCart() {
-  try { return JSON.parse(localStorage.getItem('tkwCart')) || []; }
+  try { return JSON.parse(sessionStorage.getItem('tkwCart')) || []; }
   catch(e) { return []; }
 }
 
 function saveCart(cart) {
-  localStorage.setItem('tkwCart', JSON.stringify(cart));
+  sessionStorage.setItem('tkwCart', JSON.stringify(cart));
 }
 
 function cartTotalQty(cart) {
@@ -127,7 +127,7 @@ function renderCartItems() {
         '<div class="cart-item-info">' +
           '<div class="cart-item-title">' + item.title + '</div>' +
           '<div class="cart-item-edition">Hardcover Edition</div>' +
-          '<div class="cart-item-price">$' + (item.price * item.qty).toFixed(2) + '</div>' +
+          '<div class="cart-item-price">$' + item.price.toFixed(2) + '</div>' +
         '</div>' +
         '<div class="cart-item-actions">' +
           '<div class="qty-control">' +
