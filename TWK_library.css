@@ -279,6 +279,31 @@
 
 .also-like-char img { max-height: 220px; object-fit: contain; }
 
+
+.mascot-section {
+    position: relative;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.mascot-goose {
+  background: var(--crimson);
+  text-align: center;
+  position: relative;;
+  height: fit-content;
+  bottom: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mascot-goose img {
+  height: 10rem;
+  margin: 0 auto;
+  display: block;
+}
+
+
 @media (max-width: 900px) {
   .library-layout { flex-direction: column; padding: 1.5rem 1rem; }
   .sidebar { position: static; flex: none; width: 100%; flex-direction: row; flex-wrap: wrap; gap: 0.8rem; }

@@ -478,6 +478,28 @@
 
 .place-order-terms a { color: var(--crimson); }
 
+.mascot-section {
+    position: relative;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.mascot-goose {
+  text-align: center;
+  position: relative;;
+  height: fit-content;
+  bottom: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mascot-goose img {
+  height: 10rem;
+  margin: 0 auto;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .cart-layout { flex-direction: column; padding: 1.5rem 1rem; }
   .cart-right { flex: none; width: 100%; position: static; }
