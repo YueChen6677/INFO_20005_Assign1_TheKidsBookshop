@@ -1,33 +1,14 @@
-.library-banner {
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 2rem 1.5rem;
-  position: relative;
-  min-height: 120px;
-  overflow: hidden;
-}
-
-.library-banner-title {
-  font-family: var(--font-title);
-  font-size: 2.8rem;
-  color: var(--crimson);
-  text-align: center;
-  position: relative;
+.cart-banner-title {
+    font-family: var(--font-title);
+  position: relative;   /* 使文字层叠在背景图之上 */
   z-index: 1;
-  line-height: 1.1;
+  text-align: center;
+  color: var(--crimson);
+  font-size: clamp(1.5rem, 4vw, 3rem);  /* 字体大小也随窗口自适应 */
+  line-height: 1;
+  margin: 0;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
 }
-
-.library-banner-title em {
-  font-style: italic;
-  font-family: var(--font-title);
-}
-
-.banner-char { position: absolute; bottom: 0; height: 120px; }
-.banner-char img { height: 100%; object-fit: contain; }
-.banner-char-left { left: 0; }
-.banner-char-right { right: 0; }
 
 /* Layout */
 .product-section {
