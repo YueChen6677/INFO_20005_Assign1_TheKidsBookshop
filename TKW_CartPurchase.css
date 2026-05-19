@@ -313,7 +313,7 @@
 }
 
 .summary-terms {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   color: var(--gray);
   text-align: center;
   line-height: 1.6;
@@ -322,6 +322,27 @@
 
 .summary-terms a { color: var(--crimson); }
 
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+  margin-top: 1rem;
+}
+.trust-badges-text {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 3.2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.trust-badges-icon {
+  text-align: center;
+  display: flex;
+  gap: 5rem;
+}
+.trust-badges-icon svg { max-width: 1.5rem;; }
 
 /* PurchaseForm */
 .purchase-heading {
