@@ -10,11 +10,11 @@
 
 .cart-banner-title {
     font-family: var(--font-title);
-  position: relative;   /* 使文字层叠在背景图之上 */
+  position: relative;   
   z-index: 1;
   text-align: center;
   color: var(--crimson);
-  font-size: clamp(1.5rem, 4vw, 3rem);  /* 字体大小也随窗口自适应 */
+  font-size: clamp(1.5rem, 4vw, 3rem);  
   line-height: 1;
   margin: 0;
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
