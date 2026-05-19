@@ -129,13 +129,15 @@ function renderCartItems() {
           '<div class="cart-item-edition">Hardcover Edition</div>' +
           '<div class="cart-item-price">$' + item.price.toFixed(2) + '</div>' +
         '</div>' +
+        '<div class="cart-item-right">' +
         '<div class="cart-item-actions">' +
-          '<div class="qty-control">' +
+        '<button class="cart-remove">Remove</button>' +
+        '</div>' +
+        '<div class="qty-control">' +
             '<button class="qty-btn cart-minus">−</button>' +
             '<span class="qty-num">' + item.qty + '</span>' +
             '<button class="qty-btn cart-plus">+</button>' +
           '</div>' +
-          '<button class="cart-remove">Remove</button>' +
         '</div>' +
       '</div>'
     );
