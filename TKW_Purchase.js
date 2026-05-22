@@ -14,17 +14,16 @@ function showValidationModal(missingFields) {
         'display:flex;align-items:center;justify-content:center;' +
         'z-index:9999;">' +
         '<div style="' +
-          'background:#fff;border-radius:12px;padding:2rem 2.2rem;' +
+          'background:#fff;border-radius:25px;padding:2rem 2.2rem;' +
           'max-width:360px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,0.18);' +
           'font-family:inherit;text-align:center;">' +
-          '<div style="font-size:2rem;margin-bottom:0.5rem;">⚠️</div>' +
-          '<h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:#1a1a1a;">' +
-            'Please fill in all required fields' +
+          '<h3 style="margin:0 0 0.5rem;font-family:var(--font-title);font-size:2rem;color:var(--crimson)">' +
+            'Please fill in all required fields.' +
           '</h3>' +
-          '<p style="margin:0 0 1.2rem;font-size:0.875rem;color:#555;line-height:1.5;" ' +
+          '<p style="margin:0 0 1.2rem;font-size:0.75rem;color:#555;line-height:1.5;" ' +
             'id="tkwModalBody"></p>' +
           '<button id="tkwModalClose" style="' +
-            'background:#c0392b;color:#fff;border:none;border-radius:8px;' +
+            'background:var(--crimson);color:#fff;border:none;border-radius:25px;' +
             'padding:0.6rem 1.8rem;font-size:0.95rem;cursor:pointer;' +
             'font-family:inherit;">' +
             'Got it' +
