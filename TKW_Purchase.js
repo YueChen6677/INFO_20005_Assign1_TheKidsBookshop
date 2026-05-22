@@ -1,3 +1,57 @@
+// ── Validation Modal ─────────────────────────────────────────────────────────
+// Creates a lightweight modal once and reuses it on every call.
+
+function showValidationModal(missingFields) {
+  var modal = document.getElementById('tkwValidationModal');
+
+  if (!modal) {
+    // Build modal markup
+    modal = document.createElement('div');
+    modal.id = 'tkwValidationModal';
+    modal.innerHTML =
+      '<div id="tkwModalOverlay" style="' +
+        'position:fixed;inset:0;background:rgba(0,0,0,0.45);' +
+        'display:flex;align-items:center;justify-content:center;' +
+        'z-index:9999;">' +
+        '<div style="' +
+          'background:#fff;border-radius:12px;padding:2rem 2.2rem;' +
+          'max-width:360px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,0.18);' +
+          'font-family:inherit;text-align:center;">' +
+          '<div style="font-size:2rem;margin-bottom:0.5rem;">⚠️</div>' +
+          '<h3 style="margin:0 0 0.5rem;font-size:1.1rem;color:#1a1a1a;">' +
+            'Please fill in all required fields' +
+          '</h3>' +
+          '<p style="margin:0 0 1.2rem;font-size:0.875rem;color:#555;line-height:1.5;" ' +
+            'id="tkwModalBody"></p>' +
+          '<button id="tkwModalClose" style="' +
+            'background:#c0392b;color:#fff;border:none;border-radius:8px;' +
+            'padding:0.6rem 1.8rem;font-size:0.95rem;cursor:pointer;' +
+            'font-family:inherit;">' +
+            'Got it' +
+          '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    document.getElementById('tkwModalClose').addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+    // Also close on overlay click
+    document.getElementById('tkwModalOverlay').addEventListener('click', function(e) {
+      if (e.target === this) modal.style.display = 'none';
+    });
+  }
+
+  // Populate missing-field list
+  var body = document.getElementById('tkwModalBody');
+  body.innerHTML = 'The following field' +
+    (missingFields.length > 1 ? 's are' : ' is') +
+    ' missing or incomplete:<br><br>' +
+    missingFields.map(function(f){ return '• ' + f; }).join('<br>');
+
+  modal.style.display = 'block';
+}
+
 // Shipping
 function initShippingForm() {
   var firstName = document.getElementById('firstName');
@@ -15,19 +69,36 @@ function initShippingForm() {
     });
   });
 
-  // Street address: max 60 chars, any character is fine
+  // Street address: max 60 chars
   street.setAttribute('maxlength', '60');
 
   // Postcode: digits only, max 10
   zip.setAttribute('maxlength', '10');
+
   zip.addEventListener('input', function() {
     this.value = this.value.replace(/\D/g, '').slice(0, 10);
   });
 
-  // Save address
+  // Confirm & Pay — validate before navigating
   var confirmBtn = document.querySelector('.btn-checkout');
   if (confirmBtn) {
+    // Remove the inline onclick so JS fully controls navigation
+    confirmBtn.removeAttribute('onclick');
+
     confirmBtn.addEventListener('click', function() {
+      var missing = [];
+      if (!firstName.value.trim()) missing.push('First Name');
+      if (!lastName.value.trim())  missing.push('Last Name');
+      if (!street.value.trim())    missing.push('Street Address');
+      if (!city.value.trim())      missing.push('State / City');
+      if (!zip.value.trim())       missing.push('Postcode');
+
+      if (missing.length > 0) {
+        showValidationModal(missing);
+        return;   // block navigation
+      }
+
+  // Save address and proceed
       var addr = {
         firstName : firstName.value.trim(),
         lastName  : lastName.value.trim(),
@@ -36,9 +107,11 @@ function initShippingForm() {
         zip       : zip.value.trim()
       };
       sessionStorage.setItem('tkwShipping', JSON.stringify(addr));
+      window.location.href = 'TKW_Purchase_BPayment.html';
     });
   }
 }
+
 
 
 // Payment
@@ -57,7 +130,7 @@ function initPaymentForm() {
   });
 
   // Card number: digits only// max 16 // auto-space every 4 digits for display
-  cardNumber.setAttribute('maxlength', '19'); // 16 digits + 3 spaces
+  cardNumber.setAttribute('maxlength', '19'); 
   cardNumber.addEventListener('input', function() {
     var digits = this.value.replace(/\D/g, '').slice(0, 16);
     this.value = digits.match(/.{1,4}/g)
@@ -65,7 +138,7 @@ function initPaymentForm() {
       : digits;
   });
 
-  // Expiry: MM/YY format // digits only, auto-insert slash
+  // Expiry: MM/YY format 
   expiry.setAttribute('maxlength', '5');
   expiry.addEventListener('input', function() {
     var digits = this.value.replace(/\D/g, '').slice(0, 4);
@@ -76,10 +149,30 @@ function initPaymentForm() {
     }
   });
 
-  // CVV: digits only, exactly 3
+  // CVV: digits only
   cvv.setAttribute('maxlength', '3');
   cvv.addEventListener('input', function() {
     this.value = this.value.replace(/\D/g, '').slice(0, 3);
+  });
+}
+
+  // Confirm & Pay — validate before navigating
+var confirmBtn = document.querySelector('.btn-checkout');
+if (confirmBtn) {
+  confirmBtn.removeAttribute('onclick');
+  confirmBtn.addEventListener('click', function() {
+    var missing = [];
+    if (!cardName.value.trim()) missing.push('Cardholder Name');
+    var digits = cardNumber.value.replace(/\D/g, '');
+    if (digits.length < 16) missing.push('Card Number (must be 16 digits)');
+    if (expiry.value.replace(/\D/g, '').length < 4) missing.push('Expiry Date (MM/YY)');
+    if (cvv.value.length < 3) missing.push('CVV (must be 3 digits)');
+
+    if (missing.length > 0) {
+      showValidationModal(missing);
+      return;
+    }
+    window.location.href = 'TKW_Purchase_CReview.html';
   });
 }
 
@@ -105,9 +198,8 @@ function initReviewPage() {
 
 
 // boot 
-
 document.addEventListener('DOMContentLoaded', function() {
   initShippingForm();
   initPaymentForm();
   initReviewPage();
-});
+})
