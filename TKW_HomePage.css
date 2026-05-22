@@ -20,7 +20,7 @@
 
 .hero-title {
   font-family: var(--font-title);
-  font-size: 10rem;
+  font-size: 8rem;
   color: #fff;
   line-height: 0.95;
   letter-spacing: 5%;
@@ -30,7 +30,7 @@
 
 .hero-subtitle {
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: rgba(255,255,255,0.9);
   margin-bottom: 2rem;
   line-height: 1.5;
@@ -72,7 +72,7 @@
 
 .store-section {
   background: var(--cream);
-  padding: 0 2rem 2rem;
+  padding: 5rem 2rem 2rem;
   display: flex;
   justify-content: center;
 }
@@ -114,7 +114,7 @@
 
 .about-desc {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--gray);
   max-width: 640px;
   line-height: 1.8;
@@ -235,20 +235,22 @@
 /* RESPONSIVE//refChecked*/
 @media (max-width: 900px) {
   .hero { padding: 2rem 2rem 0; }
-  .hero-title { font-size: 3.5rem; }
+  .hero-title { font-size: 10rem; }
   .hero-image { max-width: 220px; }
 }
 
 @media (max-width: 768px) {
   .hero { flex-direction: column; align-items: flex-start; min-height: auto; padding: 2rem 1.5rem 1.5rem; }
   .hero-image { align-self: flex-end; max-width: 180px; margin-top: -3rem; }
-  .hero-title { font-size: 3rem; }
+  .hero-title { font-size: 8rem; }
+  .hero-subtitle { font-size: 0.8rem; }
   .age-categories { grid-template-columns: 1fr; max-width: 360px; }
   .store-image-wrap { min-height: 200px; }
 }
 
-@media (max-width: 480px) {
-  .hero-title { font-size: 2.4rem; }
+@media (max-width: 420px) {
+  .hero-title { font-size: 4rem; }
   .age-categories { grid-template-columns: 1fr 1fr; max-width: 100%; }
+  .about-desc { font-size: 0.9rem; }
 }
 

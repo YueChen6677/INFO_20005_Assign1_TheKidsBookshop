@@ -84,7 +84,7 @@
 
 .product-title {
   font-family: var(--font-title);
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   color: var(--crimson);
   line-height: 1;
   margin-bottom: 0.4rem;
@@ -358,12 +358,15 @@
   .also-like-grid { grid-template-columns: repeat(3, 2fr); }
 }
 
-@media (max-width: 500px) {
-  .product-title { font-size: 2rem; }
+@media (max-width: 400px) {
+      .cart-banner-title { font-size: 2.8rem; }
+  .product-title { font-size: 3.5rem; }
   .product-section { padding: 1.5rem 1rem; }
   .product-details-section { padding: 0 1rem 2rem; }
   .details-grid { grid-template-columns: 2fr; }
   .library-banner-title { font-size: 1.8rem; }
   .banner-char { height: 70px; }
   .also-like-grid { grid-template-columns: repeat(1, 2fr); }
+      .mascot-goose img { height: 6rem; }
+    .mascot-turtle img { height: 6rem; }
 }

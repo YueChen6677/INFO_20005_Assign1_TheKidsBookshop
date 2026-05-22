@@ -4,7 +4,7 @@
   z-index: 1;
   text-align: center;
   color: var(--crimson);
-  font-size: clamp(1.5rem, 5vw, 5rem); 
+  font-size: 5rem; 
   text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
   margin: 0;
 }
@@ -378,9 +378,9 @@
 /* PurchaseForm */
 .purchase-heading {
   font-family: var(--font-title);
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: var(--crimson);
-  line-height: 1.1;
+  line-height: 0.9;
   margin-bottom: 0.4rem;
 }
 
@@ -553,23 +553,23 @@
 }
 
 @media (max-width: 768px) {
+      .cart-banner-title { font-size: 4rem; }
   .cart-layout { flex-direction: column; padding: 1.5rem 1rem; }
   .cart-right { flex: none; width: 100%; position: static; }
   .order-summary { position: static; }
-  .cart-banner-title { font-size: 2rem; }
-  .purchase-banner-title { font-size: 2rem; }
   .step-line { width: 40px; }
-  .cart-banner { padding: 1.2rem 1.5rem; }
   .purchase-banner { padding: 1.2rem 1.5rem; }
   .purchase-banner .banner-char-left { left: 180px; }
   .form-row { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
+      .cart-banner-title { font-size: 2.8rem; }
   .cart-item-img { flex: 0 0 80px; height: 105px; }
-  .cart-banner-title { font-size: 1.6rem; }
   .cart-banner .banner-char { height: 70px; }
   .purchase-banner .banner-char { height: 70px; }
   .trust-badges { gap: 1rem; }
   .step-line { width: 24px; }
+      .mascot-goose img { height: 6rem; }
+    .mascot-turtle img { height: 6rem; }
 }

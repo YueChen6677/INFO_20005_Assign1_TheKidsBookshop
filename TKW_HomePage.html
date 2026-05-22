@@ -20,12 +20,13 @@
       <a href="about.html">About Us</a>
     </nav>
     <div class="header-right">
-      <form class="header-search search-form">
+      <form class="header-search search-form" id="headerSearchForm">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
         </svg>
         <input id="headerSearchInput" type="text" placeholder="Search books, authors..." />
       </form>
+
       <div class="header-icons">
         <span class="lang-badge">English · AUD$</span>
         <a href="cart.html">
@@ -49,8 +50,8 @@
 
   <!-- Mobile Menu -->
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="library.html">Library</a>
-    <a href="workshops.html">Workshops</a>
+    <a href="TKW_library.html">Library</a>
+    <a href="TKW_Workshops.html">Workshops</a>
     <a href="TKW_About.html">About Us</a>
     <form class="search-form" style="display:flex;gap:8px;margin-top:4px;">
       <input type="text" placeholder="Search books, authors..." style="flex:1;padding:8px 12px;border-radius:20px;border:1px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.15);color:#fff;font-family:inherit;outline:none;" />
@@ -73,22 +74,16 @@
     </div>
   </section>
 
-  <!-- Wave divider/externalReference -->
-  <div class="wave-top">
-    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F5EFE0"/>
-    </svg>
-  </div>
 
   <!-- STORE PHOTO SECTION -->
-  <section class="store-section">
+  <div class="Workshop">
+  <!-- OUR WORKSHOP INFO -->
+  <section class="about-section">
+      <section class="store-section">
     <div class="store-image-wrap">
       <img src="TKW Image Sources/store.png" alt="Inside the Kids' Workshop store" />
     </div>
   </section>
-
-  <!-- OUR WORKSHOP INFO -->
-  <section class="about-section">
     <h2 class="section-title">Our Workshop</h2>
     <p class="about-desc">
       The Kids' Workshop is a warm and welcoming children's bookstore designed for little readers.<br />
@@ -110,7 +105,7 @@
     <a href="TKW_About.html" class="btn-primary">Visit Us</a>
   </section>
 
-
+</div>
 
   <!-- ONLINE STORE SECTION -->
   <section class="online-store-section">
