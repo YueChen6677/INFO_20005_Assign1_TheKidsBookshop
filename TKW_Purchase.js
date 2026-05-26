@@ -61,18 +61,24 @@ function initShippingForm() {
   if (!firstName) return;   // not on shipping page
 
   // Name + Surname: letters, numbers, spaces only // max 20 chars
-  [firstName, lastName, city].forEach(function(input) {
-    input.setAttribute('maxlength', '20');
-    input.addEventListener('input', function() {
-      this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '').slice(0, 20);
-    });
+
+  [firstName, lastName].forEach(function(input) {
+  input.setAttribute('maxlength', '20');
+  input.addEventListener('input', function() {
+    this.value = this.value.replace(/[^a-zA-Z0-9 ]/g, '').slice(0, 20);
   });
+});
+
+city.setAttribute('maxlength', '10');
+city.addEventListener('input', function() {
+  this.value = this.value.replace(/[^a-zA-Z]/g, '').slice(0, 10);
+});
 
   // Street address: max 60 chars
-  street.setAttribute('maxlength', '60');
+  street.setAttribute('maxlength', '40');
 
   // Postcode: digits only, max 10
-  zip.setAttribute('maxlength', '10');
+  zip.setAttribute('maxlength', '5');
 
   zip.addEventListener('input', function() {
     this.value = this.value.replace(/\D/g, '').slice(0, 10);
