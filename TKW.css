@@ -578,7 +578,7 @@ img { max-width: 100%; display: block; }
   .lang-badge { display: none; }
   .hamburger { display: flex; }
   .header-logo-text { font-size: 1.1rem; }
-  .section-title { font-size: 1.8rem; }
+  .section-title { font-size: 2.5rem; }
   .books-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .also-like-char { display: none; }
   .also-like-grid { grid-template-columns: repeat(3, 2fr); }
