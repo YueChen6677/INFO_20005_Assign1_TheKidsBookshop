@@ -1,4 +1,22 @@
+// Menu//
+function initMobileMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (!hamburger || !mobileMenu) return;
 
+  hamburger.addEventListener('click', function () {
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function (e) {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+    }
+  });
+}
+
+//Cart//
 function getCart() {
   try { return JSON.parse(sessionStorage.getItem('tkwCart')) || []; }
   catch(e) { return []; }
@@ -185,6 +203,7 @@ function removeItem(id) {
 
 //Init
 document.addEventListener('DOMContentLoaded', function(){
+    initMobileMenu();
   refreshBadges();
   refreshSummary();
   initQuantity();

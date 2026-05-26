@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 8rem 0rem;
+  padding: 5rem 10rem 0rem;
   min-height: 48rem;
   position: relative;
   overflow: hidden;
@@ -15,7 +15,8 @@
 .hero-content {
   flex: 1;
   max-width: 480px;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
 }
 
 .hero-title {
@@ -25,7 +26,8 @@
   line-height: 0.95;
   letter-spacing: 5%;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+  text-shadow: 7px 10px 25px rgba(0,0,0,0.3)
+  z-index: 2;
 }
 
 .hero-subtitle {
@@ -34,30 +36,45 @@
   color: rgba(255,255,255,0.9);
   margin-bottom: 2rem;
   line-height: 1.5;
+  z-index: 2;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+    text-shadow: 7px 10px 25px rgba(0,0,0,0.3)
 }
 
 .hero-image {
-  flex: 0.8;
-  min-width: 80%;
-  align-self: stretch;
-  display: flex;
-  margin-left: auto; 
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  width: auto;
+  height: 100%;
+  display: block;
+  pointer-events: none;
 }
 
 .hero-image img {
-    width: 90%;
-    height: 90%;
-  max-height: none;
-  object-fit: cover;
-  margin-left: 0%;
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
-
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, var(--crimson) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
 .hero-image::after {
   position: absolute;
   top: 0;
@@ -236,12 +253,13 @@
 @media (max-width: 900px) {
   .hero { padding: 2rem 2rem 0; }
   .hero-title { font-size: 10rem; }
-  .hero-image { max-width: 220px; }
+  .hero-image { height: 90%; top: auto; bottom: 0; }
 }
+
 
 @media (max-width: 768px) {
   .hero { flex-direction: column; align-items: flex-start; min-height: auto; padding: 2rem 1.5rem 1.5rem; }
-  .hero-image { align-self: flex-end; max-width: 180px; margin-top: -3rem; }
+  .hero-image { height: 100%; }
   .hero-title { font-size: 8rem; }
   .hero-subtitle { font-size: 0.8rem; }
   .age-categories { grid-template-columns: 1fr; max-width: 360px; }
@@ -250,7 +268,7 @@
 
 @media (max-width: 420px) {
   .hero-title { font-size: 4rem; }
-  .age-categories { grid-template-columns: 1fr 1fr; max-width: 100%; }
+  .hero-image { height: 100%; }
+  .age-categories { grid-template-columns: 1fr; max-width: 100%; }
   .about-desc { font-size: 0.9rem; }
 }
-
