@@ -147,11 +147,12 @@ function initPaymentForm() {
   expiry.setAttribute('maxlength', '5');
   expiry.addEventListener('input', function() {
     var digits = this.value.replace(/\D/g, '').slice(0, 4);
-    if (digits.length > 2) {
-      this.value = digits.slice(0, 2) + '/' + digits.slice(2);
-    } else {
-      this.value = digits;
+    //Cap month at 12
+    if (digits.length >= 2) {
+      var mm = Math.min(parseInt(digits.slice(0, 2)), 12);
+      digits = String(mm).padStart(2, '0') + digits.slice(2);
     }
+    this.value = digits.length > 2 ? digits.slice(0, 2) + '/' + digits.slice(2) : digits;
   });
 
   // CVV: digits only
