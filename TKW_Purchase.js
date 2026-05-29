@@ -99,6 +99,16 @@ city.addEventListener('input', function() {
       if (!zip.value.trim())       missing.push('Postcode');
 
       if (missing.length > 0) {
+        //Clear previous red boxes.
+        document.querySelectorAll('.form-input').forEach(function(el) {
+          el.style.boxShadow = '';
+        });
+        //Add red box to empty fields.
+        document.querySelectorAll('.form-input').forEach(function(el) {
+          if (!el.value.trim()) {
+            el.style.boxShadow = '0 0 0 2px var(--crimson)';
+          }
+        });
         showValidationModal(missing);
         return;   // block navigation
       }
@@ -190,6 +200,16 @@ if (confirmBtn) {
     if (cvv.value.length < 3) missing.push('CVV (must be 3 digits)');
 
     if (missing.length > 0) {
+    //Clear previous red boxes.
+    document.querySelectorAll('.form-input').forEach(function(el) {
+      el.style.boxShadow = '';
+    });
+    // Add red box to empty fields.
+    document.querySelectorAll('.form-input').forEach(function(el) {
+      if (!el.value.trim()) {
+        el.style.boxShadow = '0 0 0 2px var(--crimson)';
+      }
+    });
       showValidationModal(missing);
       return;
     }
