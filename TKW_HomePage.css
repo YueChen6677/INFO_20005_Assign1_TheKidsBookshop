@@ -242,11 +242,10 @@
 }
 
 .mascot-goose img {
-  height: 15rem;
+  height: 10rem;
   margin: 0 auto;
   display: block;
 }
-
 
 /* RESPONSIVE//refChecked*/
 @media (max-width: 900px) {
