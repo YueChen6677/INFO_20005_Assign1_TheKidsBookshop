@@ -288,6 +288,25 @@
   display: block;
 }
 
+/* Search Popup*/
+#librarySearchForm {
+  position: relative;
+}
+
+.search-popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  z-index: 200;
+  padding: 1.4rem 1.4rem 1rem;
+  border: 1.5px solid var(--light-gray);
+}
+
+
 
 @media (max-width: 900px) {
   .library-layout { flex-direction: column; padding: 1.5rem 1rem; }

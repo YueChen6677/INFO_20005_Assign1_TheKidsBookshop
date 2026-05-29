@@ -113,8 +113,66 @@
             <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
           </svg>
           <input id="librarySearchInput" type="text" placeholder="Search for books, authors..." />
-        </form>
+        
+  <!-- Search Dropdown-->
+  <div class="search-popup" id="searchPopup">
 
+    <!-- Recent Searches-->
+    <div class="search-popup-section">
+      <div class="search-popup-row">
+        <span class="search-popup-label">Recent Searches</span>
+        <button class="search-popup-clear">Clear All</button>
+      </div>
+      <div class="search-recent-tags">
+        <span class="search-recent-tag">Bedtime Stories <span class="tag-x">×</span></span>
+        <span class="search-recent-tag">Ada Adam <span class="tag-x">×</span></span>
+        <span class="search-recent-tag">Picture Books <span class="tag-x">×</span></span>
+      </div>
+    </div>
+        <!-- AI Guess-->
+        <div class="search-popup-section">
+          <div class="search-ai-label">
+            Guess What You're Looking For?
+          </div>
+          <a href="TKW_product-midnight.html">
+            <div class="search-ai-card-bg" style="background-image: url('TKW Image Sources/b1.5.png');"></div>
+            <div class="search-ai-card-content">
+              <span class="search-ai-badge">FANTASY</span>
+              <div class="search-ai-title">That Midnight<br>Math Teacher</div>
+              <div class="search-ai-desc">A gripping tale of numbers, mystery, and midnight magic.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Trending-->
+        <div class="search-popup-section">
+          <div class="search-popup-label">Trending Stories</div>
+          <div class="search-trending-list">
+            <div class="search-trending-item">
+              <div class="search-trending-icon search-trending-icon--book">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+              </div>
+              <div class="search-trending-text">
+                <div class="search-trending-name">That Nightmare Math Teacher</div>
+                <div class="search-trending-sub">3.4k reads</div>
+              </div>
+              <svg class="search-trending-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+            <div class="search-trending-item">
+              <div class="search-trending-icon search-trending-icon--pencil">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <div class="search-trending-text">
+                <div class="search-trending-name">How to Draw a Peppa Pig</div>
+                <div class="search-trending-sub">1.2k downloads</div>
+              </div>
+              <svg class="search-trending-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+        </form>
+        
       <div class="sort-row">
         <label>Sort by:</label>
         <div class="sortBy-dropdown">
