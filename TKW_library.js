@@ -18,6 +18,25 @@ document.addEventListener('click', e => {
   if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
 });
 
+//Search Popup
+(function () {
+  const input = document.getElementById('librarySearchInput');
+  const form  = document.getElementById('librarySearchForm');
+  const popup = document.getElementById('searchPopup');
+
+  if (!input || !popup) return;
+
+  // click input or form to open
+  input.addEventListener('focus', () => popup.classList.add('open'));
+  form.addEventListener('click', () => popup.classList.add('open'));
+
+  // click elsewhere to close
+  document.addEventListener('click', (e) => {
+    if (!form.contains(e.target) && !popup.contains(e.target)) {
+      popup.classList.remove('open');
+    }
+  });
+})();
 
 //Init
 document.addEventListener('DOMContentLoaded', function(){
