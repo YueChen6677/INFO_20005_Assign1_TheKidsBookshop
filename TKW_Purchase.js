@@ -171,7 +171,22 @@ if (confirmBtn) {
     if (!cardName.value.trim()) missing.push('Cardholder Name');
     var digits = cardNumber.value.replace(/\D/g, '');
     if (digits.length < 16) missing.push('Card Number (must be 16 digits)');
-    if (expiry.value.replace(/\D/g, '').length < 4) missing.push('Expiry Date (MM/YY)');
+    
+    // Expiry validation: must be 4 digits & a valid future date.
+    var expiryDigits = expiry.value.replace(/\D/g, '');
+    if (expiryDigits.length < 4) {
+      missing.push('Expiry Date (MM/YY)');
+    } else {
+      var mm = parseInt(expiryDigits.slice(0, 2));
+      var yy = parseInt(expiryDigits.slice(2));
+      var now = new Date();
+      var curYear = now.getFullYear() % 100;
+      var curMonth = now.getMonth() + 1;
+      if (yy < curYear || (yy === curYear && mm < curMonth)) {
+        missing.push('Expiry Date (card has expired)');
+      }
+    }
+
     if (cvv.value.length < 3) missing.push('CVV (must be 3 digits)');
 
     if (missing.length > 0) {
