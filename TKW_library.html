@@ -114,14 +114,18 @@
           </svg>
           <input id="librarySearchInput" type="text" placeholder="Search for books, authors..." />
         </form>
-        <div class="sort-row">
-          <label for="sortBy">Sort by:</label>
-          <select id="sortBy">
-            <option>Most Popular</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
-            <option>Newest</option>
-          </select>
+
+      <div class="sort-row">
+        <label>Sort by:</label>
+        <div class="sortBy-dropdown">
+          <div class="sortBy-selected">Most Popular <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+          <ul class="sortBy-options">
+            <li class="active">Most Popular</li>
+            <li>Price: Low to High</li>
+            <li>Price: High to Low</li>
+            <li>Newest</li>
+          </ul>
+        </div>
         </div>
       </div>
 
