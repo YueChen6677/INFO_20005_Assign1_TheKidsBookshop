@@ -513,7 +513,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 4px;
 }
 
-.also-card-label { font-size: 0.82rem; font-weight: 600; }
+.also-card-label {   font-family: var(--font-title); font-size: 0.82rem; font-weight: 600; }
 .also-card-cat { font-size: 0.75rem; color: var(--gray); }
 .also-card-price { font-size: 0.85rem; font-weight: 700; color: var(--crimson); margin-top: 4px; }
 
