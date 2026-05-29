@@ -38,6 +38,20 @@ document.addEventListener('click', e => {
   });
 })();
 
+//Sidebar toggles
+document.querySelectorAll('.sidebar-toggle').forEach(btn => {
+  const targetId = btn.getAttribute('data-target');
+  const content = document.getElementById(targetId);
+  const arrow = btn.querySelector('svg');
+
+  //Click to hide/toggle
+  btn.addEventListener('click', () => {
+    const isOpen = content.style.display !== 'none';
+    content.style.display = isOpen ? 'none' : 'flex';
+    arrow.style.transform = isOpen ? 'rotate(-180deg)' : 'rotate(0deg)';
+  });
+});
+
 //Init
 document.addEventListener('DOMContentLoaded', function(){
     initMobileMenu();
