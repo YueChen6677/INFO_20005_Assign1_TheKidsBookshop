@@ -124,7 +124,7 @@
   cursor: pointer;
   color: var(--gray);
   transition: border-color 0.2s, color 0.2s;
-  align-self: flex-start;
+  text-align: center !important;
 }
 
 .btn-outline-dark:hover { border-color: var(--crimson); color: var(--crimson); }
