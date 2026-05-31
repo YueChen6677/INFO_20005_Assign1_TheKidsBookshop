@@ -72,6 +72,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   color: #fff;
   transition: opacity 0.2s;
+  cursor: pointer;
 }
  
 .header-nav a:hover { opacity: 0.8; }
@@ -121,7 +122,14 @@ img { max-width: 100%; display: block; }
   position: relative;
   display: flex;
   align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+  cursor: pointer;
 }
+ 
+.header-icons a:hover { opacity: 0.8; }
  
 .cart-count {
   position: absolute;
