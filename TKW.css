@@ -492,6 +492,14 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 
+.see-all-linkSub {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--crimson);
+  text-align: center !important;
+}
+
 .also-like-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -547,7 +555,6 @@ img { max-width: 100%; display: block; }
   object-fit: contain;
   display: block;
 }
-/* responsive for recommendations */
 @media (max-width: 600px) {
   .also-like-section {
     padding: 2rem 1rem;
@@ -592,12 +599,19 @@ img { max-width: 100%; display: block; }
   .also-like-grid { grid-template-columns: repeat(3, 2fr); }
 }
 
+@media (max-width: 600px) {
+      .see-all-link { display: none; }
+    .see-all-linkSub { display:inline-flex; margin-left: 70%; margin-top: 2rem; }
+}
+
 @media (max-width: 480px) {
   .site-header { padding: 0 1rem; }
   .cart-banner-title { font-size: 5rem; }
   .books-grid { grid-template-columns: repeat(2, 1fr); }
   .book-card-img { height: 160px; }
     .also-like-grid { grid-template-columns: repeat(1, 2fr); }
+    .see-all-link { display: none; }
+    .see-all-linkSub { display:inline-flex; margin-left: 70%; margin-top: 2rem; }
     .mascot-goose img { height: 6rem; }
     .mascot-turtle img { height: 6rem; }
 }
