@@ -141,11 +141,13 @@ function renderCartItems() {
   list.innerHTML = cart.map(function(item){
     return (
       '<div class="cart-item" data-id="' + item.id + '">' +
-        '<div class="cart-item-img">' +
+      '<div class="cart-item-img">' +
+        '<a href="TKW_product-' + item.id + '.html">' +
           '<img src="' + item.img + '" alt="' + item.title + '" />' +
-        '</div>' +
+        '</a>' +
+      '</div>' +
         '<div class="cart-item-info">' +
-          '<div class="cart-item-title">' + item.title + '</div>' +
+          '<div class="cart-item-title"><a href="TKW_product-' + item.id + '.html">' + item.title + '</a></div>' +
           '<div class="cart-item-edition">Hardcover Edition</div>' +
           '<div class="cart-item-price">$' + item.price.toFixed(2) + '</div>' +
         '</div>' +
