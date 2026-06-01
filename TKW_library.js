@@ -39,12 +39,18 @@ document.addEventListener('click', e => {
 })();
 
 //Sidebar toggles
+// Sidebar toggles
 document.querySelectorAll('.sidebar-toggle').forEach(btn => {
   const targetId = btn.getAttribute('data-target');
   const content = document.getElementById(targetId);
   const arrow = btn.querySelector('svg');
 
-  //Click to hide/toggle
+  // Set initial state based on screen size
+  const isMobile = window.innerWidth < 500;
+  content.style.display = isMobile ? 'none' : 'flex';
+  arrow.style.transform = isMobile ? 'rotate(-180deg)' : 'rotate(0deg)';
+
+  // Click to toggle
   btn.addEventListener('click', () => {
     const isOpen = content.style.display !== 'none';
     content.style.display = isOpen ? 'none' : 'flex';
