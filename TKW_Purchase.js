@@ -60,6 +60,14 @@ function initShippingForm() {
   var zip       = document.getElementById('zipCode');
   if (!firstName) return;   // not on shipping page
 
+  try {
+    var saved = JSON.parse(sessionStorage.getItem('tkwShipping')) || {};
+    if (saved.firstName) firstName.value = saved.firstName;
+    if (saved.lastName)  lastName.value  = saved.lastName;
+    if (saved.street)    street.value    = saved.street;
+    if (saved.city)      city.value      = saved.city;
+    if (saved.zip)       zip.value       = saved.zip;
+} catch(e) {}
   // Name + Surname: letters, numbers, spaces only // max 20 chars
 
   [firstName, lastName].forEach(function(input) {
@@ -138,6 +146,27 @@ function initPaymentForm() {
   var cvv        = document.getElementById('cvv');
   if (!cardName) return;   // not on payment page
 
+  try {
+  var saved = JSON.parse(sessionStorage.getItem('tkwPayment')) || {};
+  if (saved.cardName)   cardName.value   = saved.cardName;
+  if (saved.cardNumber) cardNumber.value = saved.cardNumber;
+  if (saved.expiry)     expiry.value     = saved.expiry;
+  if (saved.cvv)        cvv.value        = saved.cvv;
+} catch(e) {}
+window.addEventListener('beforeunload', function() {
+  var c = document.getElementById('cardName');
+  var n = document.getElementById('cardNumber');
+  var ex = document.getElementById('expiry');
+  var cv = document.getElementById('cvv');
+  if (c && n && ex && cv) {
+    sessionStorage.setItem('tkwPayment', JSON.stringify({
+      cardName   : c.value.trim(),
+      cardNumber : n.value.trim(),
+      expiry     : ex.value.trim(),
+      cvv        : cv.value.trim()
+    }));
+  }
+});
   // Cardholder name: letters and spaces only// max 40
   cardName.setAttribute('maxlength', '40');
   cardName.addEventListener('input', function() {
@@ -213,6 +242,12 @@ if (confirmBtn) {
       showValidationModal(missing);
       return;
     }
+    sessionStorage.setItem('tkwPayment', JSON.stringify({
+      cardName   : cardName.value.trim(),
+      cardNumber : cardNumber.value.trim(),
+      expiry     : expiry.value.trim(),
+      cvv        : cvv.value.trim()
+}));
     window.location.href = 'TKW_Purchase_CReview.html';
   });
 }

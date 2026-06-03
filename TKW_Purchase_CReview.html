@@ -120,7 +120,7 @@
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             Shipping To
           </div>
-          <button class="review-change" onclick="window.location.href='purchase-shipping.html'">Change</button>
+          <button class="review-change" onclick="window.location.href='TKW_Purchase_AShipping.html'">Change</button>
         </div>
         <div class="review-box-content" id="reviewShippingAddress">
           No address entered.
@@ -134,7 +134,7 @@
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
             Payment
           </div>
-          <button class="review-change" onclick="window.location.href='purchase-payment.html'">Change</button>
+          <button class="review-change" onclick="window.location.href='TKW_Purchase_BPayment.html'">Change</button>
         </div>
         <div class="review-box-content">Visa</div>
       </div>
@@ -161,7 +161,7 @@
         </div>
       </div>
 
-      <button class="btn-place-order" onclick="window.location.href='TKW_library.html'">
+      <button class="btn-place-order" onclick="sessionStorage.removeItem('tkwShipping');sessionStorage.removeItem('tkwPayment');window.location.href='TKW_library.html'">
         Back to Library
       </button>
 
