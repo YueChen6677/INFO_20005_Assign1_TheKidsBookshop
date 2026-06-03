@@ -95,6 +95,17 @@
   margin-bottom: 0.8rem;
 }
 
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.star-icons { color: #f59e0b; letter-spacing: 2px; }
+
 .product-overview {
   display: flex;
   flex-direction: column;
