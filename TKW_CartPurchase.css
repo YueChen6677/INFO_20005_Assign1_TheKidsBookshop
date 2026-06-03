@@ -108,7 +108,9 @@
  }
 
 /* Right column (order summary) */
-.cart-right { flex: 0 0 280px; }
+.cart-right { 
+  flex: 0 0 280px; }
+
 .order-summary-title{
   font-family: var(--font-title);
   font-size: 5rem;
@@ -281,11 +283,12 @@
 
 /* OrderSummary */
 .order-summary {
-  background: var(--cream);
+  background: var(--light-gray);
   border-radius: 18px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   position: sticky;
   top: 80px;
+  border: 1.5px solid var(--crimson);
 }
 
 .order-summary-title {

@@ -14,7 +14,7 @@
   z-index: 1;
   text-align: center;
   color: var(--crimson);
-  font-size: clamp(1.5rem, 4vw, 3rem);  
+  font-size: clamp(3rem, 4vw, 3rem);  
   line-height: 1;
   margin: 0;
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
@@ -516,4 +516,8 @@
     .also-like-grid { grid-template-columns: repeat(1, 2fr); }
         .mascot-goose img { height: 6rem; }
     .mascot-turtle img { height: 6rem; }
+}
+
+@media (max-width: 400px) {
+      .cart-banner-title { font-size: 2.5rem; }
 }

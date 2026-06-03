@@ -4,7 +4,7 @@
   z-index: 1;
   text-align: center;
   color: var(--crimson);
-  font-size: clamp(1.5rem, 4vw, 3rem);  
+  font-size: clamp(3rem, 4vw, 3rem);  
   line-height: 1;
   margin: 0;
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
@@ -253,17 +253,17 @@
 }
 
 .details-card, .review-card {
-  background: var(--cream);
+  background: var(--warm-cream);
   border-radius: 18px;
   padding: 1.8rem;
 }
 
 .details-card h3, .review-card h3 {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
-  color: var(--dark);
+  color: var(--crimson);
 }
 
 .details-grid {
@@ -359,7 +359,7 @@
 }
 
 @media (max-width: 400px) {
-      .cart-banner-title { font-size: 2.8rem; }
+      .cart-banner-title { font-size: 2.5rem; }
   .product-title { font-size: 3.5rem; }
   .product-section { padding: 1.5rem 1rem; }
   .product-details-section { padding: 0 1rem 2rem; }
