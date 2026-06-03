@@ -95,16 +95,10 @@
   margin-bottom: 0.8rem;
 }
 
-.stars {
+.product-overview {
   display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 1rem;
-  font-size: 0.85rem;
-  color: var(--gray);
+  flex-direction: column;
 }
-
-.star-icons { color: #f59e0b; letter-spacing: 2px; }
 
 .product-overview h3 {
   font-family: var(--font-body);
@@ -130,6 +124,7 @@
   cursor: pointer;
   padding: 4px 0;
   font-family: var(--font-body);
+  margin-left: auto;
 }
 
 
@@ -251,8 +246,14 @@
   gap: 1.5rem;
 }
 
-.details-card, .review-card {
+.details-card {
   background: var(--warm-cream);
+  border-radius: 18px;
+  padding: 1.8rem;
+}
+
+.review-card{
+  background: var(--light-gray);
   border-radius: 18px;
   padding: 1.8rem;
 }

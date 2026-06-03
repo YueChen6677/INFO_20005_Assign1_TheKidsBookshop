@@ -376,6 +376,7 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   position: relative;
   max-width: 15rem;
+  max-height: 20rem;
     display: flex;
   flex-direction: column;
   flex: 1;
