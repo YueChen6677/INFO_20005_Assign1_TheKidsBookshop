@@ -375,6 +375,10 @@ img { max-width: 100%; display: block; }
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
   position: relative;
+  max-width: 15rem;
+    display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .book-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.14); }
@@ -400,6 +404,9 @@ img { max-width: 100%; display: block; }
 
 .book-card-body {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .book-card-title {
@@ -419,12 +426,14 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .book-price {
   font-size: 1rem;
   font-weight: 700;
   color: var(--crimson);
+    margin-top: auto;
 }
 
 .add-btn {
@@ -440,6 +449,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+    margin-top: auto;
 }
 
 .add-btn:hover { background: var(--dark-crimson); }
@@ -461,7 +471,7 @@ img { max-width: 100%; display: block; }
 /* Gallery */
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
