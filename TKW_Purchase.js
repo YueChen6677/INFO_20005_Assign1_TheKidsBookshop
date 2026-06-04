@@ -258,8 +258,6 @@ if (confirmBtn) {
 function initReviewPage() {
   var addressEl = document.getElementById('reviewShippingAddress');
   if (!addressEl) return;   // not on review page
-
-  sessionStorage.removeItem('tkwCart');
   refreshBadges();
 
   try {
