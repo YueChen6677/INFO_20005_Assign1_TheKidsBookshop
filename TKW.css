@@ -376,7 +376,7 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   position: relative;
   max-width: 15rem;
-  max-height: 20rem;
+  max-height: 30rem;
     display: flex;
   flex-direction: column;
   flex: 1;
@@ -386,21 +386,26 @@ img { max-width: 100%; display: block; }
 
 .book-card-img {
   width: 100%;
-  height: 200px;
+  height: 18rem;
   object-fit: cover;
-  background: var(--light-gray);
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #999;
   font-size: 0.85rem;
   position: relative;
+  overflow: hidden;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 0.5rem;
 }
 
 .book-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+    border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .book-card-body {
@@ -556,17 +561,18 @@ img { max-width: 100%; display: block; }
 
 .also-like-deco {
   position: absolute;
-  right: 15rem;         
+  right: -15rem;         
   bottom: 0;
   pointer-events: none;
   z-index: 0;
 }
 
 .also-like-deco img {
-  height: 15rem;        
+  height: 28rem;        
   width: auto;
   object-fit: contain;
   display: block;
+  opacity: 0.8;
 }
 @media (max-width: 600px) {
   .also-like-section {
@@ -580,7 +586,7 @@ img { max-width: 100%; display: block; }
   .also-like-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+@media (max-width: 800px) {
   /* no absolute，bottom center */
   .also-like-deco {
     position: relative;
@@ -598,9 +604,9 @@ img { max-width: 100%; display: block; }
 
   .also-like-char { display: none; }
 }
-
+}
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header-nav { display: none; }
   .header-search { display: none; }
   .lang-badge { display: none; }
@@ -609,7 +615,19 @@ img { max-width: 100%; display: block; }
   .section-title { font-size: 2.5rem; }
   .books-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .also-like-char { display: none; }
-  .also-like-grid { grid-template-columns: repeat(3, 2fr); }
+   .also-like-deco {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .also-like-deco img {
+    height: 160px;
+  }
 }
 
 @media (max-width: 600px) {
