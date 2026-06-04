@@ -103,7 +103,6 @@
 /* Left column (cart items or form) */
 .cart-left { flex: 1; 
   min-width: 0;
-  max-width: 70%;
  }
 
 /* Right column (order summary) */
@@ -580,13 +579,16 @@
 }
 
 @media (max-width: 768px) {
+    .cart-layout { flex-direction: column; display: block;}
+      .cart-layout { flex-direction: column; display: block;}
+  .cart-right { flex: none; width: 100%; position: static; }
   .cart-banner-title { font-size: 4rem; }
   .step-line { width: 40px; }
   .purchase-banner { padding: 1.2rem 1.5rem; }
   .purchase-banner .banner-char-left { left: 180px; }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .cart-layout { flex-direction: column; display: block;}
   .cart-right { flex: none; width: 100%; position: static; }
   .order-summary { position: static; }
